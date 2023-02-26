@@ -1,0 +1,19 @@
+# navigate to terminal and change to the directory you want to store the created iFeature data (e.g., cd Analysis)
+# input the following codes
+
+# install iFeature
+git clone https://github.com/Superzchen/iFeature
+
+# read the package information
+iFeature/iFeature.py --help
+
+# create features
+iFeature/iFeature.py --file Peptide_train1_train.fasta --type CTDC --out Peptide_train_CTDC.csv
+iFeature/iFeature.py --file Peptide_train1_test.fasta --type CTDC --out Peptide_test_CTDC.csv
+
+# modify the above two lines of codes to create feature os CTDC, CTDD, CTDT, APAAC, KSCTriad, CKSAAGP, PAAC, NMBroto, and QSOrder
+# NMBroto: nlag=14
+# SOCNumber: nlag=14
+# QSOrder: lambda = 14
+# PAAC: lambda = 14
+# APAAC: lambda = 14
